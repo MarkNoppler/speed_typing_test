@@ -19,6 +19,13 @@ import random
 from typing import Optional
 
 
+SENTENCES = [
+    "The quick brown fox jumps over the lazy dog.",
+    "Typing speed tests are a great way to improve accuracy.",
+    "Practice makes perfect when learning to type fast."
+]
+
+
 
 class TypingTest:
     """
@@ -48,10 +55,12 @@ class TypingTest:
         self.restart_button = tk.Button(root, text="Restart", command=self.restart_test, font=("Arial", 12))
         self.restart_button.pack(pady=10)
 
+
     def start_timer(self, event):
         """Start the timer when the user begins typing."""
         if self.start_time is None:
             self.start_time = time.time()
+
 
     def calculate_speed(self, event):
         """Calculates typing speed and accuracy when Enter is pressed. Results will be displayed on screen."""
@@ -69,6 +78,7 @@ class TypingTest:
         accuracy = sum(1 for a, b in zip(typed_text, self.sentence) if a == b) / max(len(self.sentence), 1) * 100
 
         self.result_label.config(text=f"Speed: {speed:.2f} WPM | Accuracy: {accuracy:.2f}%")
+
 
     def restart_test(self):
         """
