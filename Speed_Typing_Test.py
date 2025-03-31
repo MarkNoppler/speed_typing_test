@@ -13,19 +13,11 @@ Made by:
 Jacob Fairhurst
 """
 
-
 import tkinter as tk
-import random
 import time
+import random
+from typing import Optional
 
-#sentance list
-SENTENCES =  [
-    "The quick brown fox jumps over the lazy dog.",
-    "Python is a great programming language.",
-    "Speed typing tests measure your words per minute.",
-    "Practice makes perfect when it comes to typing.",
-    "Accuracy is just as important as speed in typing."
-]
 
 
 class TypingTest:
